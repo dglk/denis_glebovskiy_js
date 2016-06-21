@@ -1,0 +1,8 @@
+#factorialForm {
+  width: 320px;
+}
+
+#factorialForm div {
+  margin: 0 0 0.5em;
+  text-align: right;
+}
