@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Tags removal</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form id="htmlRemove" target="_self">
+      <h2>HTML Tags Removal</h2>
+      <div>
+        <p><label for="htmlRemoveInput">Copy HTML here:</label></p>
+        <textarea id="htmlRemoveInput" cols="80" rows="12"></textarea>
+      </div>
+      <div>
+        <p><label for="htmlRemoveOutput">Output:</label></p>
+        <textarea id="htmlRemoveOutput" cols="80" rows="12" readonly="readonly">
+        </textarea>
+      </div>
+      <div>
+        <input type="button" id="htmlRemoveButton" value="Strip tags">
+      </div>
+    </form>
+  </body>
+</html>
