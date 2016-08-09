@@ -1,0 +1,9 @@
+.list li {
+  cursor: pointer;
+}
+li > ul, li > ol {
+  display: none;
+}
+li.show > ul, li.show > ol {
+  display: block;
+}
