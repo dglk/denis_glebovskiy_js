@@ -1,0 +1,29 @@
+.carousel {
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+  margin: 32px auto 0;
+}
+.carousel-wrapper > div {
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  display: none;
+}
+.carousel-wrapper > div.active {
+  display: block;
+}
+.carousel-arrow {
+  position: absolute;
+  font-size: 64px;
+  background: grey;
+  border-radius: 100%;
+  opacity: 0.5;
+  cursor: pointer;
+  line-height: 64px;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  margin: 16px;
+}
