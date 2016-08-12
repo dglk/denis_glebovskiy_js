@@ -1,0 +1,72 @@
+html, body {
+  font: 12px Helvetica, Verdana, Arial, sans-serif;
+}
+
+.todo {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.todo h1 {
+  color: white;
+  background: green;
+  overflow: hidden;
+  margin: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 12px;
+}
+
+.todo-control {
+  background: green;
+  padding: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.todo-control input {
+  display: inline-block;
+  background: white;
+  border: thin solid white;
+  padding: 0.5em;
+  border-radius: 12px;
+}
+
+.todo-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  font-size: 24px;
+  margin: 0 12px 6px;
+}
+
+.todo-item span {
+  vertical-align: middle;
+}
+
+.todo-hide-items > .completed {
+  display: none;
+}
+
+.checkbox, .delete {
+  display: inline-block;
+  height: 1.2em;
+  width: 1.2em;
+  border: 3px solid green;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: red;
+  margin-right: 0.25em;
+}
+
+.completed > .checkbox::before {
+  content: "V";
+}
+
+.delete::before {
+  content: "X";
+}
