@@ -1,0 +1,14 @@
+{
+  "name": "prototype-inheritance",
+  "version": "1.0.0",
+  "description": "epam training assignment",
+  "main": "index.js",
+  "devDependencies": {
+    "jasmine": "2.4.1"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "dglk",
+  "license": "ISC"
+}
