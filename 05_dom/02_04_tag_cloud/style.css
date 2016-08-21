@@ -1,0 +1,11 @@
+ul.tag-cloud {
+  list-style-type: none;
+  padding: 0;
+  width: 300px;
+}
+
+ul.tag-cloud > li {
+  padding: 0 0.25em;
+  display: inline-block;
+  color: blue;
+}
