@@ -1,0 +1,22 @@
+[
+  {
+    "note" : "Item 1.1",
+    "state" : false
+  },
+  {
+    "note": "Item 1.2",
+    "state": true
+  },
+  {
+    "note": "Item 1.3",
+    "state": false
+  },
+  {
+    "note": "Item 1.4",
+    "state": true
+  },
+  {
+    "note": "Item 1.5",
+    "state": true
+  }
+]
