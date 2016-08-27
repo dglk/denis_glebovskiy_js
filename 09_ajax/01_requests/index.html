@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="todo">
+      <h1>Todo</h1>
+      <div class="todo-category" id="todo-category-1">
+        <h2>Category 1</h2>
+      </div>
+      <div class="todo-category" id="todo-category-2">
+        <h2>Category 2</h2>
+      </div>
+      <div class="todo-category" id="todo-category-3">
+        <h2>Category 3</h2>
+      </div>
+      <div class="todo-category" id="todo-category-4">
+        <h2>Category 4</h2>
+      </div>
+    </div>
+    <script type="text/javascript">
+    var loadJson = function(path) {
+      return new Promise(function(fulfill, reject) {
+        var rq = new XMLHttpRequest();
+        rq.onreadystatechange = function() {
+          if (this.readyState === 4) {
+            if (rq.status === 200) {
+              fulfill(rq.responseText);
+            } else {
+              reject(new Error(rq.status + ' ' + rq.statusText));
+            }
+          }
+        }
+        rq.open('GET', path, true);
+        rq.send();
+      });
+    };
+
+    var renderDom = function(domElement) {
+      return function(json) {
+        var content = JSON.parse(json),
+            listParent = document.createElement('ul');
+        for (var i = 0; i < content.length; ++i) {
+          var element = document.createElement('li');
+          element.innerHTML = content[i].note;
+          if (content[i].state) {
+            element.classList.add('checked');
+          }
+          listParent.appendChild(element);
+        }
+        domElement.appendChild(listParent);
+      }
+    };
+
+    var logError = function(error) {
+      console.log("Error:", error.message);
+    };
+
+    for (var i = 1; i <= 4; ++i) {
+      (function() {
+        var j = i;
+        setTimeout(function() {
+          loadJson('data/data' + j + '.json').then(
+            renderDom(document.getElementById('todo-category-' + j)), logError);
+          }, j * 1000);
+        })();
+    }
+    </script>
+  </body>
+</html>

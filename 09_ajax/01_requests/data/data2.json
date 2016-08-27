@@ -1,0 +1,10 @@
+[
+  {
+    "note" : "Item 2.1",
+    "state" : false
+  },
+  {
+    "note": "Item 2.2",
+    "state": true
+  }
+]

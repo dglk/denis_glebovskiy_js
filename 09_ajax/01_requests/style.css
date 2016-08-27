@@ -1,0 +1,41 @@
+.todo {
+  width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid green;
+}
+
+.todo h1 {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  color: white;
+  background: green;
+  font-size: 1.44rem;
+  line-height: 1.728rem;
+}
+
+.todo h2 {
+  color: green;
+  font-size: 1.2rem;
+  line-height: 1.728rem;
+  margin: 0;
+}
+
+.todo-category {
+  padding: 0 1rem 0;
+}
+
+.todo-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-category li::before {
+  content: '( ) ';
+  font-family: monospace;
+}
+
+.todo-category li.checked::before {
+  content: '(X) ';
+  font-family: monospace;
+}
