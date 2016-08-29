@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Rams &amp; Sheep</title>
+		<link href="style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="modal" id="help">
+			<div>
+				<h1>Help</h1>
+				<p>The goal of the game is to guess a number, which consists of unique digits.</p>
+				<p>When you try to guess, you find out the count of rams ans sheep.</p>
+				<p>Rams are digits which are both present in the number and occupy a correct position.</p>
+				<p>Sheep are digits which are present in the number but occupy a wrong position.</p>
+				<p>You win the game when you guess all 4 rams.</p>
+				<p>Solve the game in a fewest number of moves and take your place on a leaderboard!</p>
+			</div>
+		</div>
+		<div class="modal" id="leaderboard">
+			<div>
+				<h1>Top 10 players</h1>
+				<ol id="leaders">
+				</ol>
+			</div>
+		</div>
+		<div class="modal" id="victory">
+			<h1>You won!</h1>
+			<p id="victory-message"></p>
+			<input type="text" id="victory-name" placeholder="Your name">
+			<input type="button" id="victory-button" value="Submit">
+		</div>
+		<div class="game">
+			<div class="game-row">
+				<h1 class="game-title">Rams &amp; Sheep</h1>
+			</div>
+			<div class="game-row" id="game-input">
+			<div class="game-cell">
+				<input type="button" class="game-button game-button-up" value="&#9650;">
+				<input type="text" class="game-field" readonly="readonly" value="1">
+				<input type="button" class="game-button game-button-down" value="&#9660;">
+			</div>
+			<div class="game-cell">
+				<input type="button" class="game-button game-button-up" value="&#9650;">
+				<input type="text" class="game-field" readonly="readonly" value="1">
+				<input type="button" class="game-button game-button-down" value="&#9660;">
+			</div>
+			<div class="game-cell">
+				<input type="button" class="game-button game-button-up" value="&#9650;">
+				<input type="text" class="game-field" readonly="readonly" value="1">
+				<input type="button" class="game-button game-button-down" value="&#9660;">
+			</div>
+			<div class="game-cell">
+				<input type="button" class="game-button game-button-up" value="&#9650;">
+				<input type="text" class="game-field" readonly="readonly" value="1">
+				<input type="button" class="game-button game-button-down" value="&#9660;">
+			</div>
+			<div class="game-cell">
+				<input type="button" class="game-button game-button-submit" id="game-button-submit" value="Check!">
+			</div>
+			</div>
+			<div class="game-row">
+				<div class="game-cell pad-left">
+					<h2>Sheep</h2>
+					<input type="text" readonly="readonly" class="game-field game-field-sheep" id="game-field-sheep" value="0">
+				</div>
+				<div class="game-cell">
+					<h2>Rams</h2>
+					<input type="text" readonly="readonly" class="game-field game-field-rams" id="game-field-rams" value="0">
+				</div>
+				<div class="game-cell">
+					<h2>Tries</h2>
+					<input type "text" readonly="readonly" class="game-field game-field-moves" id="game-field-moves" value="0">
+				</div>
+			</div>
+			<div class="game-row game-menu">
+				<input type="button" value="Help" id="help-button">
+				<input type="button" value="Leaderboard" id="leaderboard-button">
+			</div>
+		</div>
+
+		<script type="text/javascript" src="game.js"></script>
+		<script type="text/javascript" src="leaderboard.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
