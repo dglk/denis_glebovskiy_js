@@ -1,0 +1,59 @@
+.modal {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  background: rgba(33,33,33,128);
+  color: #ddd;
+  padding: 1em;
+}
+
+.visible {
+  display: block;
+}
+
+.game {
+  background: #ccc;
+  width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.game-title {
+  text-align: center;
+}
+
+.game-button {
+  width: 100%;
+  display: block;
+}
+
+.game-cell {
+  width: 18%;
+  margin: 0 1%;
+  float: left;
+  overflow: hidden;
+}
+
+.pad-left {
+  margin-left: 21%;
+}
+
+.game-row {
+  clear: both;
+}
+
+.game-field {
+  display: block;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 2em;
+  line-height: 2.4em;
+}
+
+.game-menu {
+  text-align: center;
+  padding: 1em 0 1em;
+}
